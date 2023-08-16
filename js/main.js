@@ -131,18 +131,17 @@ document.getElementById("seconds").innerHTML=`${second} S`;
 
 // ===========start-contact-textarea-section==================
 
-$( ()=> {
-    var num = 100;
-    $("textarea").keyup(function () {
+  var maxLength = 100;
+  $('textarea').keyup(function () {
       var length = $(this).val().length;
-      console.log(length)
-      var character = num - length;
+      var character = maxLength - length;
       if (character <= 0) {
-        $("#char").text("your available character finished");
+          $("#char").text("your available character finished");
+  
       } else {
-        $("#char").text(character);
+  
+          $("#char").text(character);
       }
-    });
   });
 
 
