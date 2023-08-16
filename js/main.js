@@ -6,6 +6,38 @@ $(window).ready(()=>{
     })
 })
 
+
+// ========button up======================
+
+$(window).scroll(function(){
+    let windowScroll = $(window).scrollTop();
+   
+    let section = $('#home').offset().top;
+    if (windowScroll > section){
+       $('#btn-up').show(800);
+    }
+    else{
+       $('#btn-up').hide(800);
+    }
+   
+   })
+   
+   
+   $('#btn-up').click(function(){
+       $('body,html').animate({ scrollTop:0},100)
+})
+   
+   
+// --------scroll smoothing--------
+$('.sidenav').click(function(){
+    let selected=$(this).attr('href')
+    let sectionTop=$(selected).offset().top
+    console.log(sectionTop)
+    $('body,html').animate({
+    scrollTop:sectionTop
+    },2000)
+}) 
+
 // --------sideNav------------
 
 $('.openNav').click(function(){
@@ -30,6 +62,16 @@ $('.closebtn').click(function(){
 
 })
 
+// =============== offsetLink navbar ======================
+$('.sidenav a').click( ()=> {
+    var aHref = $(this).attr("href");
+  
+    if ($(aHref).offset() != undefined) {
+      var offsetLink = $(aHref).offset().top;
+  
+    $("html,body").animate({scrollTop:offsetLink,},500); }
+     
+});
 
 // --------Chang-color----------
 
@@ -44,50 +86,9 @@ $('.sidenav li').click(function(){
 })
 
 
-// ========button up======================
-
-$(window).scroll(function(){
- let windowScroll = $(window).scrollTop();
-
- let section = $('#home').offset().top;
- if (windowScroll > section){
-    $('#btn-up').show(800);
- }
- else{
-    $('#btn-up').hide(800);
- }
-
-})
-
-
-$('#btn-up').click(function(){
-    $('body,html').animate({ scrollTop:0},100)
-})
-
-
-
-// --------scroll smoothing--------
-$('.sidenav').click(function(){
-    let selected=$(this).attr('href')
-    let sectionTop=$(selected).offset().top
-    console.log(sectionTop)
-    $('body,html').animate({
-    scrollTop:sectionTop
-    },2000)
-}) 
 
 
     
-// =============== offsetLink navbar ======================
-$('.sidenav a').click( ()=> {
-    var aHref = $(this).attr("href");
-  
-    if ($(aHref).offset() != undefined) {
-      var offsetLink = $(aHref).offset().top;
-  
-    $("html,body").animate({scrollTop:offsetLink,},500); }
-     
-});
 
 // ====================start-singers-section ========================
 
