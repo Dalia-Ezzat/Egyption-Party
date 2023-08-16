@@ -1,0 +1,299 @@
+/* =========global============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 7.5em!important;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+
+.clearfix {
+    clear: both;
+}
+body{
+    overflow: hidden;
+}
+    
+/* -----------loading-page------------- */
+.loading{
+    position: fixed;
+    z-index: 99999999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0e0d0d;
+}
+/* ==========btn-up=============== */
+
+#btn-up{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999999999;
+    display: none;
+    color:rgba(97, 5, 5, 0.94);
+    
+}
+/* ==========end-btn-up=============== */
+
+
+/* =============home-section================ */
+
+#home{  
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/events-heavenly-header.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    color: white;
+    
+}
+
+.homeLayer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(214, 46, 51 , 0.6);
+}
+
+#leftMenu{
+    height: 100%;
+    width:0px;
+    position: fixed;
+    z-index:9999;
+    top: 0;
+    left: 0;
+    background-color: #0e0d0d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 20px 8px 20px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    color: white;
+}
+
+
+#Home h2{
+    margin-top: 200px; 
+}
+
+
+#Home h2,p{
+
+    text-align: center;
+}
+
+
+.sidenav a:hover{
+    color:  rgba(214, 46, 51 , 0.4);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidenav ul{
+    display: flex;
+    list-style-type: none;
+}
+.sidenav li{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 2.2px;
+    cursor: pointer;
+}
+#home-tittle {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+#home-tittle h2{
+
+    font-size: 60px;
+}
+
+.openNav,.closebtn{
+    font-size:30px;
+    cursor:pointer;
+}
+
+.animate__heartBeat{
+    animation-duration:2s;
+   animation-delay: 0.9s;
+}
+
+/* =============end-home-section================ */
+
+
+/*  ====================start-singers-section ======================== */
+
+.singer{
+ margin-block: 8em!important;
+}
+
+.toggle{
+    background-color: rgba(214, 46, 52, 0.677);
+    padding:0.3em;
+    cursor: pointer;
+    color: white;
+    margin: 0;
+}
+
+.singer div{
+    background-color:  #ccc;
+    padding:0.8em;
+    display: none;
+}
+
+.singer .one{
+    display:block;
+}
+/*  ==================== end-singers-section ======================== */
+
+
+
+/* ==================== start-counter-section ========================  */
+.countDownDate{
+    background-image:url(../images/invitation-2508607__340.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    position: relative;
+    height: 50%;
+
+}
+.countLayer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(214, 46, 51 , 0.6);
+    color: white;
+}
+
+
+.tim{
+    border: 3px solid #FFF;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+
+
+/* ==================== end-counter-section ========================  */
+
+
+
+/* ==================== start-contact-section ========================  */
+
+.contact{
+    margin-top: 10em!important;
+}
+
+.contact ul{
+    list-style-type: none;
+}
+
+.contact ul .text-red{
+    color: rgba(214, 46, 52, 0.945) !important;
+    margin: 2em 0;
+}
+
+.icons-contact div{
+    width:2.3em;
+    height:2.3em;
+    border: 1px solid rgb(48, 47, 47);
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  background-color 0.2s;
+    color:#3b3b3baf;
+
+}
+
+.icons-contact div:hover{
+    background-color: rgba(214, 46, 52, 0.945) !important;
+    color:white !important;
+}
+
+
+
+/* contact-us form  */
+
+#contact-us  textarea{
+    height: 120px;
+    resize:vertical;
+}
+
+#contact-us  button{
+    background-color: #D62E33;
+    color:#fff;
+    padding:8px 15px;
+    border-radius: 0%;
+    transition: all 0.2s;
+}
+
+#char {
+    font-size: 20px;
+    color: #D62E33;
+}
+
+.form-control:focus,
+ button:focus{
+    box-shadow: none;
+    /* border:none; */
+}
+button:hover{
+    background-color: #300608;
+}
+
+/* ==================== end-contact-section ========================  */
+
+
+
+
+
+/* ----------Handle------------ */
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:white; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#a4a3a3;
+    border-radius: 15px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:#595959;
+  }
+  
+  
